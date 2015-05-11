@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Technical Task</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../static/css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/lib/flat-ui.min.css">
+	<link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+<body>
+</body>
+	
+	<h3>Technical Task</h3>
+	
+	<div class="container" id="container1">
+	</div>
+	
+	<script type="text/javascript" src="../static/js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/underscore.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/backbone.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/flat-ui.min.js"></script>
+	
+	<script type="text/javascript">
+		
+		function checkDisplay(){
+			if ($(window).width() >= 992){
+				window.location.href = "http://www.candyspace.com"
+			}
+		}
+		
+		$(document).ready(checkDisplay());
+		$(window).resize(function(){
+			checkDisplay();
+		});
+		
+	</script>
+	
+	<script type="text/html" id="postTemplate">
+	
+		<div class="col-xs-12" id="post">
+			<span>
+				<h6> <%= Name %> </h6> 
+				<small> <%= Date %> </small> 
+			</span> 
+			<p> <%= Text %> </p>
+			<small> <%= Email %> </small>
+		</div>
+			
+	</script>
+	
+	<script type="text/javascript" src="../static/js/main.js"></script>
+	
+</html>

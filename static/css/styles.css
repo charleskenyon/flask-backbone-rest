@@ -1,0 +1,94 @@
+h3 {
+	text-align: center;
+	color: #34495E;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-size: 1.9em;
+}
+
+span > :first-child {
+	color: #2C3E50;
+	float: left;
+}
+
+span > :nth-child(2) {
+	color: #34495E;
+	float: right;
+	font-size: 13px;
+}
+
+#post > :nth-child(2) {
+	clear: both;
+	margin-bottom: 0px; 
+	color: #2C3E50;
+}
+
+#post > :nth-child(3) {
+	font-style: italic;
+	color: #34495E;
+}
+
+#post {
+	transition: .40s;
+}
+
+#post:hover { 
+	background-color: #EAEAEC; 
+}
+
+#container1 {
+	
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+h6 {
+	margin-top: 10px; 
+	margin-bottom: 5px; 
+}
+
+@media all and (max-width: 768px) {
+	h6 {
+		font-size: 1.2em;
+	}
+	#container1 {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+	#post > :nth-child(2) {
+		font-size: 16px;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.container {
+		padding-right: 0px; 
+		padding-left: 0px; 
+	}
+	h6 {
+		font-size: 1em;
+	}
+	h3 {
+		font-size: 1.6em;
+		margin-top: 15px;
+	}
+	p {
+		font-size: 0.8em;
+	}
+	span > :nth-child(2) {
+		font-size: 0.6em;
+	}
+	#post > :nth-child(2) {
+		font-size: 13px;
+	}
+	#post > :nth-child(3) {
+		font-size: 0.7em;
+	}
+	#container1 {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+	#post {
+		margin-bottom: 10px;
+	}
+}
