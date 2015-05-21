@@ -1,17 +1,16 @@
-h3 {
-	text-align: center;
-	color: #34495E;
-	margin-top: 15px;
-	margin-bottom: 10px;
-	font-size: 1.9em;
+#container1 span > :first-child  {
+	float: left;
+	padding-right: 10px;
+	padding-top: 6px;
+	color: #E74C3C;
 }
 
-span > :first-child {
+#container1 span > :nth-child(2) {
 	color: #2C3E50;
 	float: left;
 }
 
-span > :nth-child(2) {
+#container1 span > :nth-child(3) {
 	color: #34495E;
 	float: right;
 	font-size: 13px;
@@ -42,16 +41,68 @@ span > :nth-child(2) {
 	margin-bottom: 15px;
 }
 
-h6 {
+#container1 h6 {
 	margin-top: 10px; 
 	margin-bottom: 5px; 
 }
 
+h3 {
+	text-align: center;
+	color: #34495E;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-size: 1.9em;
+}
+
+#topInput {
+	padding-bottom:10px;
+}
+
+.form-control {
+	padding: 5px;
+}
+
+#container2 {
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+#addComment {
+	background-color: #e6e6e6;
+	padding-bottom: 10px;
+	padding-top: 15px;
+	border-radius: 8px;
+	transition: .40s;
+}
+
+#nameCol {
+	padding-right: 2.5px;
+}
+
+#emailCol {
+	padding-left: 2.5px;
+}
+
+#buttonInput {
+	padding-top: 10px;
+	text-align: center;
+}
+
+#postButton {
+	padding: 5px;
+	font-size: 14px;
+}
+
+textarea {
+    resize: none;
+}
+
 @media all and (max-width: 768px) {
-	h6 {
+	#container1 h6 {
 		font-size: 1.2em;
 	}
-	#container1 {
+	.container {
 		margin-right: 30px;
 		margin-left: 30px;
 	}
@@ -65,17 +116,17 @@ h6 {
 		padding-right: 0px; 
 		padding-left: 0px; 
 	}
-	h6 {
+	#container1 h6 {
 		font-size: 1em;
 	}
 	h3 {
 		font-size: 1.6em;
 		margin-top: 15px;
 	}
-	p {
+	#container1 p {
 		font-size: 0.8em;
 	}
-	span > :nth-child(2) {
+	#container1 span > :nth-child(3) {
 		font-size: 0.6em;
 	}
 	#post > :nth-child(2) {
@@ -87,6 +138,10 @@ h6 {
 	#container1 {
 		margin-right: 30px;
 		margin-left: 30px;
+	}
+	#container2 {
+		padding-right: 15px;
+		padding-left: 15px;
 	}
 	#post {
 		margin-bottom: 10px;

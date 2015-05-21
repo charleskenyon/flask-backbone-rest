@@ -15,6 +15,27 @@
 	
 	<h3>Technical Task</h3>
 	
+	<div class="container" id="container2">
+		<div class="row">
+			<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 " id="addComment">
+				<div class="row" id="topInput">
+					<div class="col-xs-6" id="nameCol">
+						<input type="text"  class="form-control" placeholder="Name" id="name">
+					</div>
+					<div class="col-xs-6" id="emailCol">
+						<input type="text"  class="form-control" placeholder="Email" id="email">
+					</div>
+				</div>
+				<textarea class="form-control" rows="3" id="comment"  placeholder="Add post..."></textarea>
+				<div class="row">
+					<div class="col-xs-4 col-md-2" id="buttonInput">
+						<a class="btn btn-block btn-sm btn-primary" id="postButton">Post</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<div class="container" id="container1">
 	</div>
 	
@@ -24,11 +45,12 @@
 	<script type="text/javascript" src="../static/js/lib/backbone.min.js"></script>
 	<script type="text/javascript" src="../static/js/lib/flat-ui.min.js"></script>
 	
+	<!--
 	<script type="text/javascript">
 		
 		function checkDisplay(){
 			if ($(window).width() >= 992){
-				window.location.href = "http://www.candyspace.com"
+				window.location.href = ""
 			}
 		}
 		
@@ -38,12 +60,14 @@
 		});
 		
 	</script>
+	-->
 	
 	<script type="text/html" id="postTemplate">
 	
-		<div class="col-xs-12" id="post">
+		
+		<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" id="post">
 			<span>
-				<h6> <%= Name %> </h6> 
+				<a href="" id="delete"><i class="fui-cross"></a></i> <h6> <%= Name %> </h6> 
 				<small> <%= Date %> </small> 
 			</span> 
 			<p> <%= Text %> </p>
