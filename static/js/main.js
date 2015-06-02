@@ -1,5 +1,3 @@
-var counter = 0;
-
 var Post = Backbone.Model.extend({
 	
 	urlRoot: "/posts"
@@ -50,7 +48,7 @@ var PostView = Backbone.View.extend({
 		} else {
 			this.$el.attr("id", this.model.id || counter);
 		};
-		counter++;
+		
 		var template = _.template($("#postTemplate").html());
 		var html = template(this.model.toJSON());
 		this.$el.html(html);
@@ -135,6 +133,7 @@ var PostsView = Backbone.View.extend({
 
 });
 
+var counter = 0;
 var posts = new Posts();
 
 posts.fetch({
@@ -146,4 +145,17 @@ posts.fetch({
 var successCallback = function(){
 	posts.orderByDate();
 	var postsView = new PostsView({model: posts})
+	counter = get_highest_model_id()
+};
+
+function get_highest_model_id() {
+	var highest_id = 0;
+	
+	for (var i = 0; i < posts.length; i++) {
+		if (posts.at(i).attributes.id > highest_id) {
+			highest_id = posts.at(i).attributes.id
+		};
+	};
+	
+	return highest_id + 1
 };

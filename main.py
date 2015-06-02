@@ -26,8 +26,10 @@ def create_and_update_posts():
 		
 		posts.append(each_post)
 		
+	"""
 	for post in posts:
 		table.update(post, ['Name', 'Email', 'Text', 'Date'])
+	"""
 	
 	return posts
 	
