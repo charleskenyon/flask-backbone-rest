@@ -11,25 +11,18 @@ def get_db_table():
 	return table
 
 def create_and_update_posts():
-	counter = 0
 	posts = []
 
 	for post in table:
 		each_post = {
-			'id': counter,
+			'id': post['id'],
 			'Name': post['Name'],
 			'Email': post['Email'],
 			'Text': post['Text'],
 			'Date': post['Date']
 		}
-		counter += 1
 		
 		posts.append(each_post)
-		
-	"""
-	for post in posts:
-		table.update(post, ['Name', 'Email', 'Text', 'Date'])
-	"""
 	
 	return posts
 	
@@ -50,8 +43,16 @@ def create_json_post(post_id):
 	
 	if get_post is None:
 		abort(404)
+		
+	get_post = {
+		'id': get_post['id'],
+		'Name': get_post['Name'],
+		'Email': get_post['Email'],
+		'Text': get_post['Text'],
+		'Date': get_post['Date']
+	}
 	
-	return json.dumps(posts[post_id])
+	return json.dumps(get_post)
 		
 @app.route('/posts', methods=['POST'])
 def add_new_json_post():
@@ -89,7 +90,7 @@ def delete_post(post_id):
 	posts.remove(remove_post)
 	table.delete(id=post_id)
 	
-	return json.dumps(posts[post_id])
+	return json.dumps(posts)
 
 if __name__ == '__main__':
 	app.run(debug=True)
